@@ -1,5 +1,4 @@
 all: buttontest.elf
-	scp ./buttontest.elf ecube@192.168.254.99:~/
 	echo "		6) send complete"
 
 buttontest.elf: libMyPeri.a buttontest.o
