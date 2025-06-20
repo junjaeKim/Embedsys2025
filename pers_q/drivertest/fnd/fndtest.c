@@ -10,12 +10,12 @@ void doHelp(void)
 {
 	printf("Usage:\n");
 	printf("fndtest [option] [displaynum] [maxcounter]  >\n");
-	printf("option   s  : static display  , displaynum range 0 ~ 999999\n");
-	printf("option   t  ; time display  \n"); 
+	printf("option   t  : static display  , displaynum range 0 ~ 999999\n");
+	printf("option   s  : time display  \n"); 
 	printf("option   c  : count from 0 to maxcounter .\n");
 	printf("option   o  : fnd off\n");
-	printf("ex) fndtest s '123456'  ; display  '123456' \n");
-	printf("ex) fndtest t 		;display current time \n");
+	printf("ex) fndtest t '123456'  ; display  '123456' \n");
+	printf("ex) fndtest s 		;display current time \n");
 	printf("ex) fndtest c 10 ; display counting number  from  0  to  10  with 1 Second interval.\n");
 	printf("ex) fndtest 0		;display off \n");
 }
@@ -38,7 +38,7 @@ int main(int argc , char **argv)
 		return 1;
 	}
 	
-	if ( argv[1][0] == 's'  )
+	if ( argv[1][0] == 't'  )
 	{
 		mode = MODE_STATIC_DIS;
 		if ( argc < 3 )
@@ -49,7 +49,7 @@ int main(int argc , char **argv)
 		}
 		number = atoi(argv[2]);
 	}
-	else if ( argv[1][0] == 't'  )
+	else if ( argv[1][0] == 's'  )
 	{
 		mode = MODE_TIME_DIS;
 		if ( argc < 2 )
