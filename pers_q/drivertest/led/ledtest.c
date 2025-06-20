@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include "led.h"
 
 void doHelp(void)
@@ -11,43 +12,18 @@ printf(" ledtest 0x00 ;all led off\n");
 }
 
 int main(int argc, char** argv)
-{
-	int keep=1;
+{	
+	unsigned int data = 0;
 	if (argc < 2 ){
 		perror(" Args number is less than 2\n");
 		doHelp();
 		return 1;
 	}
+	data = (unsigned int)strtol(argv[1], NULL, 16);
+	printf("write data : 0x%X\n", data);
 		while(1) {
 		ledLibInit();
 		ledRead(argv[1]);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x00);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x01);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x03);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x07);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x0f);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x1f);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x3f);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0x7f);
-		ledLibExit();
-		ledLibInit();
-		ledRead(0xff);
 		ledLibExit();
 		}
 	return 0;

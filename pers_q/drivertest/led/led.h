@@ -8,4 +8,4 @@ int ledRead(const char* data);
 
 #define LED_DRIVER_NAME "/dev/periled"
 
-#endif _LED_H_
+#endif
