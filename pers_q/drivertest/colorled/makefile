@@ -1,5 +1,4 @@
 all: colorledtest.elf
-	scp ./colorledtest.elf ecube@192.168.254.99:~/
 	echo "		6) send complete"
 
 colorledtest.elf: libMyPeri.a colorledtest.o

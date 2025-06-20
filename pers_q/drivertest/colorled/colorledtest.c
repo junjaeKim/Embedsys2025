@@ -14,12 +14,15 @@ int main(int argc, char *argv[])
     
     pwmLedInit();
     
-    //pwmSetPercent(atoi(argv[1]), 0);
-     
-    //pwmSetPercent(atoi(argv[2]), 1);
+    pwmSetPercent(atoi(argv[1]), 0);
     
-    //pwmSetPercent(atoi(argv[3]), 2);
+    pwmSetPercent(atoi(argv[2]), 1);
+    
+    pwmSetPercent(atoi(argv[3]), 2);
+    printf("Color LED set: R=%d, G=%d, B=%d",atoi(argv[1]),atoi(argv[2]),atoi(argv[3]));
+    
     // argv로 받은 R,G,B값으로 LED를 On.
+    /*
     while(1)
     {
         printf("Color showing\n");
@@ -72,6 +75,7 @@ int main(int argc, char *argv[])
     sleep(1);
 
     }
+    */
     pwmInactiveAll();
     return 0;
 }
