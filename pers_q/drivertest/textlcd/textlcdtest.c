@@ -14,8 +14,9 @@ int i = 0, c = 0;
 int main()
 {
  txtlcd_Init();
- printf("textlcdtest ");
- scanf("%d",&lineFlag);
+// printf("textlcdtest ");
+int lineFlag;
+ scanf("%d", &lineFlag);
  if(lineFlag==1){ 
         fgets(str_mid1, sizeof(str_mid1), stdin);
         for(; i < strlen(str_mid1); i++)
@@ -42,7 +43,7 @@ int main()
         str2[c] = '\0'; 
         }
 //lcdtextwrite(str1, str2, lineFlag);
-lcdtextwrite( "PRESS START", , 1);
-lcdtextwrite( "PRESS START", "0xff", 2);
+lcdtextwrite( "HelloWorld", 1);
+printf("string:Helloworld\n");
 txtlcd_Exit();
 }
