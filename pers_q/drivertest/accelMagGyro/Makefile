@@ -1,5 +1,5 @@
 all: accelMagGyrotest.elf
-	scp ./accelMagGyrotest.elf ecube@192.168.254.19:~/teddy/test/
+	
 	echo "		6) send complete"
 
 accelMagGyrotest.elf: libMyPeri.a accelMagGyrotest.o
