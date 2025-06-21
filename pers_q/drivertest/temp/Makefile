@@ -1,5 +1,5 @@
 all: temptest.elf
-	scp ./temptest.elf ecube@192.168.254.99:~/
+
 	echo "		6) send complete"
 
 temptest.elf: libMyPeri.a temptest.o

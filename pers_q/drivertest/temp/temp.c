@@ -70,8 +70,9 @@ void temp_read()
 
     double temp = (double)value * 0.0625;
     //1비트가 0.0625도 
-    printf("Current Temp : %lf \n", temp);
-    if(temp > 30)
+ 	printf("%lf\n",temp);
+ //   printf("Current Temp : %lf \n", temp);
+ /*   if(temp > 30)
     {
         printf("It's SUMMER!!\n");
     }
@@ -81,5 +82,5 @@ void temp_read()
     }
     else 
         printf("It's AUTUMN or SPRING?\n");
-
+*/
 }
